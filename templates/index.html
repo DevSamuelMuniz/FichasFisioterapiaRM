@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fichas</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css') }}">
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
+    </header>
+
+    <div class="containerpaciente">
+        <h1>Lista de Pacientes</h1>
+
+        <div class="addbtn">
+            <button onclick="window.location.href='/cadastro'">Cadastrar Paciente</button>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome do Paciente</th>
+                <th>Profissional Assistente</th>
+                <th>Convênio</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for paciente in pacientes %}
+                <tr>
+                    <td>{{ paciente[1] }}</td>
+                    <td>{{ paciente[4] }}</td>
+                    <td>{{ paciente[3] }}</td>
+                    <td><a href="/pacientes/{{ paciente[0] }}">Detalhes</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    
+    
+    
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

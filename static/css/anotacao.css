@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+* {
+    margin: 0;
+    font-family: Poppins;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #2F6158;
+}
+
+header img{
+    padding: 16px;
+    width: 10% ;
+}
+
+.addbtn{
+  position: fixed; 
+  top: 140px;
+  right: 40px;
+}
+
+.addbtn button {
+border: none;
+background-color: #3f8f80;
+color: white;
+padding: 6%;  
+cursor: pointer;
+border-radius: 6px;
+font-size: 16px;
+width: 200px;
+}
+
+.addbtn button:hover {
+background-color: #1a4d43;
+transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.container h1{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.container form{
+  display: flex;
+  flex-direction: column;
+}
+
+form label{
+  padding-left: 20px;
+}
+
+.enviar {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 20%; 
+  height: 32px; 
+  margin-left: auto; 
+  margin-right: auto;
+
+  background-color: #2F6158;
+  color: white  ;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+
+.container p{
+  border: 1.5px solid #304642;
+  margin-top: 30px;
+  padding: 10px;
+  padding-left: 14px;
+  word-wrap: break-word;
+  margin-left: 10px; 
+  margin-right: 10px;
+  
+}
+
+.container textarea{
+  padding-left: 20px;
+  padding-right: 20px;
+
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+.container i {
+  color: #1a4d43;  
+  font-size: 20px;
+  display: flex;
+  background-color: aqua;
+  flex-direction: row;
+
+}
+
+.anotacao-item {
+  position: relative;
+  margin-bottom: 10px; 
+}
+
+.apagar-btn {
+  position: absolute;
+  top: 5px; 
+  right: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.anotacao-text p {
+  margin: 0;
+}

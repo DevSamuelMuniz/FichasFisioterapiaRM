@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fichas</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/pacientes.css') }}">
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+</head>
+    <body>
+        
+        <header>
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
+        </header>
+
+        <h1 class="nomepaciente">{{ paciente[1] }}</h1>
+
+        <div class="container">
+            <div class="buttons">
+                <button onclick="window.location.href='/anotacao/{{ paciente[0] }}'" >Ficha de Anotação</button> 
+                <br>
+                <button onclick="window.location.href='/frequencia/{{ paciente[0] }}'">Folha de Frequência</button>
+                <br>
+                <button onclick="window.location.href='/vfrequencia/{{ paciente[0] }}'">Visualizar Frequências</button>
+                <br>
+                <button onclick="window.location.href='/evolucao/{{ paciente[0] }}'">Ficha de Evolução</button>
+                <br>
+                <button onclick="window.location.href='/anamnese/{{ paciente[0] }}'">Ficha de Anamnese</button>
+                <br>
+                
+                
+
+              <form class="apagarCadastro" action="/apagar_cadastro/{{ paciente[0] }}" method="POST">
+                <input type="submit" value="Apagar Cadastro">
+            </form>
+
+            </div>
+        </div>
+        
+
+          
+        <script src="{{ url_for('static', filename='pacientes.js') }}"></script>
+    </body>
+</html>

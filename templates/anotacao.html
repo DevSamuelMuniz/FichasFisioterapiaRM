@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fichas</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/anotacao.css') }}">
+    <script src="https://kit.fontawesome.com/37a1e74d74.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+
+</head>
+    <body>
+        
+        <header>
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">                
+        </header>
+
+        <div class="container">
+            <h1>Anotações do Paciente</h1>
+
+           
+    
+            <form action="/salvar_anotacao" method="POST">
+                <label for="anotacao">Anotações:</label><br>
+                <textarea name="anotacao" id="anotacao" cols="30" rows="10" placeholder="Insira suas anotações"></textarea><br><br>
+                
+                <input type="hidden" name="id_paciente" value="{{ paciente.id }}">
+                <input class="enviar" type="submit" value="Salvar Anotação">
+            </form>
+    
+            <div class="anotacoes">
+                {% for anotacao, data in anotacoes|reverse %}
+                    <p>{{ anotacao }}
+                        <br><br>
+                        {{ data }}
+                        
+                    </p>
+
+                {% endfor %}
+            </div>
+            
+
+       
+    </body>
+</html>

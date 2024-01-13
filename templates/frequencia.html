@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fichas</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/frequencia.css') }}">
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+
+</head>
+    <body>
+        
+        <header>
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
+        </header>
+
+        <div class="containerForm">
+            <h1>Cadastrar Frequência</h1>
+            <div class="formulario">
+                <form action="/salvar_frequencia" method="POST">
+                    <label for="n_sessoes">Nº de Sessões:</label><br>
+                    <input type="number" id="n_sessoes" name="n_sessoes"><br>
+                
+                    <label for="data">Data:</label><br>
+                    <input type="date" id="data" name="data"><br>
+                
+                    <label for="assinatura">Assinatura:</label><br>
+                    <input type="text" id="assinatura" name="assinatura"><br>
+                
+                    <label for="horario_atendimento">Horário de Atendimento:</label><br>
+                    <input type="time" id="horario_atendimento" name="horario_atendimento"><br>
+                
+                    <input type="hidden" name="id_paciente" value="{{ paciente.id }}">
+                    <input class="save" type="submit" value="Salvar Frequência">
+                </form>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+      

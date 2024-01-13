@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fichas</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/anamnese.css') }}">
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+
+</head>
+    <body>
+        
+        <header>
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
+        </header>
+
+        <div class="container">
+            <h1>Anotações do Paciente</h1>
+    
+            <form action="/salvar_anotacao" method="POST">
+                <textarea name="anotacao" id="anotacao" cols="30" rows="10" placeholder="Insira suas anotações"></textarea>
+                <input type="hidden" name="id_paciente" value="{{ paciente.id }}">
+                <input type="submit" value="Salvar Anotação">
+            </form>
+    
+            <div class="anotacoes">
+                {% for anotacao in anotacoes %}
+                    <p>{{ anotacao }}</p>
+                {% endfor %}
+            </div>
+        </div>
+
+       
+    </body>
+</html>
+
+      

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+* {
+    margin: 0;
+    font-family: Poppins;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #2F6158;
+}
+
+header img{
+    padding: 16px;
+    width: 10% ;
+}
+
+
+.addbtn{
+    position: fixed; 
+    top: 140px;
+    right: 40px;
+}
+
+.addbtn button {
+  border: none;
+  background-color: #3f8f80;
+  color: white;
+  padding: 6%;  
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.addbtn button:hover {
+  background-color: #1a4d43;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.containerpaciente h1{
+  display: flex;
+  padding: 30px;
+  color: #1a4d43;
+  justify-content: center;
+}
+
+.listaPacientes{
+  display: flex;
+  flex-direction: column;
+
+
+  font-weight: bold;
+  color: #1a4d43;
+  font-size: 24px;
+}
+
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-top: 3%;
+
+}
+
+th, td {
+  border: 1.2px solid #2F6158;
+  text-align: center;
+  padding: 8px;  
+}
+
+td a {
+  color: #123f36;  
+}
+
+
+th {
+  background-color: #2F6158;
+  color: white;
+  font-weight: 300;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+  color: black;
+}
+
+tr:nth-child(odd) {
+  background-color: white; 
+  color: black;
+}
+
+tr:hover {
+  background-color: #3f8f80; 
+  color: white;
+  transition: background-color 0.1s ease, color 0.1s ease;
+
+}
+
+td a:hover {
+  background-color: #3f8f80; 
+  color: white; 
+}
